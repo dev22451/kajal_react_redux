@@ -4,8 +4,9 @@ export const counterSlice = createSlice({
     initialState:{data:  []},
     reducers: {
        addTodo(state,action){
-           state.data.push(action.payload)
-       }
+           state.data.push(action.payload)  
+
+      }
     }
 })
 
