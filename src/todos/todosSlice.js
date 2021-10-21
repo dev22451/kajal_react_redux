@@ -5,7 +5,6 @@ export const counterSlice = createSlice({
     reducers: {
        addTodo(state,action){
            state.data.push(action.payload)  
-
       }
     }
 })
