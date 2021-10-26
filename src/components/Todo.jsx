@@ -1,6 +1,6 @@
 
 
-// created Todo.jsx Component
+// creating UI part- adding input box and add button
 
 import React, { useState } from "react";
 import { connect } from "react-redux";
