@@ -1,5 +1,6 @@
 
 import './App.css';
+// imported Todo
 import Todos from './components/Todo';
 import TodoFinal from './components/TodoFinal';
 
