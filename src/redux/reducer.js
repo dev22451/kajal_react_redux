@@ -1,3 +1,4 @@
+// created reducer.js file
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState=[];
