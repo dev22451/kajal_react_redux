@@ -1,4 +1,4 @@
-// created reducer.js file
+// created reducer.js filet
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState=[];
