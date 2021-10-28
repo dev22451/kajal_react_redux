@@ -1,0 +1,16 @@
+.for{
+text-align: center;
+display: block;
+}
+input[type=text]{
+    width: 70%;
+}
+.field{
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+}
+.password{
+    position: relative;
+    top: -23px;
+}

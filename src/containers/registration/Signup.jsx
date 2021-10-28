@@ -1,64 +1,68 @@
 import React, { useState } from "react";
+import './style.css'
 const Signup = () =>{
     const[userRegistration, setUserRegistration] = useState({
-       firstName:"",
-       lastName:"",
-       userName:"",
-       email:"",
-       password:"",
-       confirmPassword:"",
+       FirstName:"",
+       LastName:"",
+       Username:"",
+       Email:"",
+       Password:"",
+       ConfirmPassword:"",
     });
 
 
     const handleInput = (e) =>{
-       
+      
 
 
     }
     return(
         <>
-        <from>
-            <div>
-                <label htmlFor="firstname">firstName</label>
+        <form className="for">
+           <h1>Sign Up</h1>
+           
+            <div className="field">
+                <label htmlFor="firstname">First Name</label><br/>
                 <input type="text" autoComplete="off" name="firstname" id="firstname"
-                 value={userRegistration.firstName} onChange={handleInput}/>
+                 value={userRegistration.FirstName} onChange={handleInput}/>
+            </div>
+          
+            <div className="field">
+               <label htmlFor="lastname">Last Name</label><br/>
+               <input type="text" autoComplete="off" name="lastname" id="lastname" 
+               value={userRegistration.LastName} onChange={handleInput}/>
             </div>
             
-            <div>
-               <label htmlFor="lastname">lastName</label>
-               <input type="text" autoComplete="off" name="lastname" id="lastname" 
-               value={userRegistration.lastName} onChange={handleInput}/>
-            </div>
-
-            <div>
-               <label htmlFor="username">userName</label>
+            <div className="field">
+              <label htmlFor="username">Username</label><br/>
                <input type="text"  autoComplete="off"  name="username" id="username"
-                value={userRegistration.userName} onChange={handleInput}/>
+                value={userRegistration.Username} onChange={handleInput}/>
             </div>
 
-            <div>
-               <label htmlFor="email">email</label>
+            <div className="field">
+               <label htmlFor="email">Email</label><br/>
                <input type="text" autoComplete="off" name="email" id="email" 
-               value={userRegistration.email} onChange={handleInput}/>
+               value={userRegistration.Email} onChange={handleInput}/>
             </div>
 
-            <div>
-               <label htmlFor="password">password</label>
+            <div className="field password">
+               <label htmlFor="password">Password</label><br/>
                <input type="text" autoComplete="off" name="password" id="password" 
-               value={userRegistration.password} onChange={handleInput}/>
+               value={userRegistration.Password} onChange={handleInput}/>
             </div>
 
-            <div>
-               <label htmlFor="confirmpassword">confirmPassword</label>
+            <div className="field">
+               <label htmlFor="confirmpassword">Confirm Password</label><br/>
                <input type="text" autoComplete="off" name="password" id="password" 
-               value={userRegistration.confirmPassword}onChange={handleInput}/>
+               value={userRegistration.ConfirmPassword}onChange={handleInput}/><br/><br/>
             </div>
 
-            <button type="button">Registration</button>
+            <button type="button">Register</button>
+           
 
 
 
-        </from>
+        </form>
         </>
 
     )
