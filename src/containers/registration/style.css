@@ -1,10 +1,6 @@
 /* adding css */
 .for{
 text-align: center;
-display: block;
-width: 50vw;
- margin-left: auto;
- margin-right: auto;
 }
 input{
     width: 70%;
@@ -38,15 +34,23 @@ input{
 .btn{
   display: block; 
   margin: auto;
-  width:91%;
+  width:89%;
   padding: 10px;
-  background-color: rgb;
+  background-color: #FEA409;
   
 }
 label{
     margin-left:30px ;
 }
-
-body{
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fcars.mclaren.com%2Fus-en&psig=AOvVaw1alOgq3MheVuAxP7icE5QH&ust=1635657644283000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKClttyx8fMCFQAAAAAdAAAAABAY");
+.bg-img {
+    background: url(../../assets/images/sign-in.jpg) no-repeat center 0;
+    position: relative;
+    background-size: cover;
+    background-position: 100% 45%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.right-img, .img-content{
+    height: 100vh;
 }
