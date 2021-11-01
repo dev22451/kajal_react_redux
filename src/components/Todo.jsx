@@ -1,5 +1,5 @@
-
-
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 // creating UI part- adding input box and add button
 
 import React, { useState } from "react";
@@ -8,32 +8,30 @@ import { connect } from "react-redux";
 // imported action addTodos
 import { addTodos } from "../redux/reducer";
 // adding  mapStateToProps method to map the state and props at store
-const mapStateToProps = (state) => {
-  return {
-    todos: state,
-  };
-};
+const mapStateToProps = (state) => ({
+  todos: state,
+});
 // adding mapDispatchToProps method
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addTodo: (obj) => dispatch(addTodos(obj)),
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  addTodo: (obj) => dispatch(addTodos(obj)),
+});
 
 // adding state
 const Todos = (props) => {
   const [todo, setTodo] = useState("");
-  // / created add function 
+  // / created add function
 
   const add = () => {
     if (todo === "") {
       alert("empty");
     } else {
+      // eslint-disable-next-line react/prop-types
       props.addTodo({
-        id:  Date.now(),
+        id: Date.now(),
         item: todo,
       });
       setTodo("");
+      // eslint-disable-next-line react/prop-types
       console.log(props.addTodo);
     }
   };

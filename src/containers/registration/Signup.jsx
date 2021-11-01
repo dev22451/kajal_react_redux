@@ -12,6 +12,7 @@ const Signup = () => {
     ConfirmPassword: "",
   });
   const [checkPassword, setCheckPassword] = useState(false);
+  // const [emailValidation, setemailValidation] = useState(false);
 
   const handleSubmit = () => {
     if (userRegistration.Password === userRegistration.ConfirmPassword) {
