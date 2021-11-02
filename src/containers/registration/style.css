@@ -1,18 +1,8 @@
 /* adding css */
-.for{
-text-align: center;
-}
 input{
-    width: 70%;
     border:none;
-}
-.field{
-    display: inline-block;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 15px;
-    text-align: left;
-}
+    }
+
 .password{
     position: relative;
     top: -23px;
@@ -23,25 +13,38 @@ input{
 }
 .action{
     border: 1px solid black;
-    margin-left: 25px;
-    margin-right: 25px;
     padding: 5px;
-    margin-bottom: 5px;
-    margin-top: 8px;
-    
-
 }
-.btn{
-  display: block; 
-  margin: auto;
-  width:89%;
-  padding: 10px;
+.btn-theme{
   background-color: #FEA409;
-  
 }
-label{
-    margin-left:30px ;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #FEA409;
+    border-color: #FEA409;
 }
+a{
+    text-decoration: none;
+    color: #FEA409;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: #FEA409;
+    border-color: #FEA409;
+    box-shadow: 0 0 0 0;
+}
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #FEA409;
+    border-color: #FEA409;
+}
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0;
+}
+.h44{
+    font-weight: 700;
+}
+
 .bg-img {
     background: url(../../assets/images/sign-in.jpg) no-repeat center 0;
     position: relative;
@@ -50,7 +53,11 @@ label{
     width: 100%;
     display: block;
     overflow: hidden;
+    opacity:1;
 }
 .right-img, .img-content{
     height: 100vh;
+}
+.ch1, .ch2{
+margin-right: 3000rem;
 }

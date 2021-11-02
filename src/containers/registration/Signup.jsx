@@ -1,10 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// eslint-disable-next-line import/no-duplicates
-import { Row, Col } from "react-bootstrap";
-// eslint-disable-next-line import/no-duplicates
-import { Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
+
 import "./style.css";
 
 const Signup = () => {
@@ -19,7 +19,6 @@ const Signup = () => {
   const [checkPassword, setCheckPassword] = useState(false);
   // const [emailValidation, setemailValidation] = useState(false);
 
-  // eslint-disable-next-line no-unused-vars
   const handleSubmit = () => {
     if (userRegistration.Password === userRegistration.ConfirmPassword) {
       setCheckPassword(true);
@@ -38,11 +37,12 @@ const Signup = () => {
     <>
       <Row className="g-0">
         <Col md={6}>
-          <div className="for h-100">
-            <form>
-              <h1>Sign Up</h1>
-
-              <div className="field">
+          <div className="for h-100 p-5">
+            <h1>Shehnshah</h1>
+            <h4 className="h44">Create Your Account</h4>
+            <p>Enter your full name and email address to create your account</p>
+            <form className="row">
+              <div className="field col-md-6 my-2">
                 <label htmlFor="FirstName">First Name</label>
                 <br />
                 <div className="action">
@@ -63,7 +63,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <div className="field">
+              <div className="field col-md-6 my-2">
                 <label htmlFor="LastName">Last Name</label>
                 <br />
                 <div className="action">
@@ -84,7 +84,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <div className="field">
+              <div className="field col-md-6 my-2">
                 <label htmlFor="Username">Username</label>
                 <br />
                 <div className="action">
@@ -105,7 +105,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <div className="field">
+              <div className="field col-md-6 my-2">
                 <label htmlFor="Email">Email</label>
                 <br />
                 <div className="action">
@@ -126,7 +126,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <div className="field">
+              <div className="field col-md-6 my-2">
                 <label htmlFor="Password">Password</label>
                 <br />
                 <div className="action">
@@ -147,7 +147,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <div className="field">
+              <div className="field col-md-6 my-2">
                 <label htmlFor="ConfirmPassword">Confirm Password</label>
                 <br />
                 <div className="action">
@@ -168,17 +168,36 @@ const Signup = () => {
                   <br />
                 </div>
               </div>
-              <div>
-                <input type="checkbox" name="checkbox1" />
-                <p>I agree to receive instructional and promotional emails</p>
-                <input type="checkbox" name="checkbox2" />
-                <p>I agree t</p>
-              </div>
-              <Button variant="primary" className="btn">Register</Button>
-              {" "}
+
               {checkPassword === false && userRegistration.ConfirmPassword !== "" ? (
                 <span>Passwords are not equal</span>
               ) : null}
+              {" "}
+              <div className="mb-3 form-check ms-3">
+                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                <label className="form-check-label" htmlFor="exampleCheck1">I agree to receive instructional and promotional emails</label>
+              </div>
+              <div className="mb-3 form-check ms-3">
+                <input type="checkbox" className="form-check-input" id="exampleCheck2" />
+                <label className="form-check-label" htmlFor="exampleCheck2">
+                  I agree to Shehnshah's
+                  {" "}
+                  <a href="#">Terms of Use</a>
+                  {" "}
+                  &amp;
+                  {" "}
+                  <a href="#">Privacy Policy</a>
+                </label>
+              </div>
+              <Button className="btn btn-theme" onClick={handleSubmit}>Register</Button>
+              <br />
+              {" "}
+              <p className="my-3 text-center">
+                Already have an account?
+                <a href="#"> Login</a>
+              </p>
+              <Button className="btn border-1 mb-3" variant="outline-dark">Sign in with Phone Number</Button>
+              <p className="text-center"> &copy; 2021 shehnshah. All Rights Reserved</p>
 
             </form>
           </div>
@@ -186,9 +205,14 @@ const Signup = () => {
         <Col md={6}>
           <div className="right-img">
             <div className="bg-img">
-              <div className="d-flex align-items-center flex-column justify-content-center img-content">
+              <div className="d-flex align-items-center flex-column justify-content-center img-content px-5">
                 <h3>About Shehnshah</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                <p>
+                  Long queues time works, that's what comes to your
+                  mind when you think about getting your car washed.Shehnshah is here
+                  to change this forever.Car washing won't be the same again
+                  {" "}
+                </p>
               </div>
             </div>
           </div>
