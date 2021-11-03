@@ -1,9 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-filename-extension */
 import Signup from "./containers/registration/Signup";
 
 function App() {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className="App">
       <Signup />
     </div>

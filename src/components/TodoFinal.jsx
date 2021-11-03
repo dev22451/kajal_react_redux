@@ -1,4 +1,3 @@
-// created TodoFinal Component
 import React from "react";
 import { connect } from "react-redux";
 import { addTodos, removeTodos } from "../redux/reducer";

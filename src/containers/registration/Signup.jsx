@@ -4,7 +4,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Button } from "react-bootstrap";
-
 import "./style.css";
 
 const Signup = () => {
@@ -17,20 +16,21 @@ const Signup = () => {
     ConfirmPassword: "",
   });
   const [checkPassword, setCheckPassword] = useState(false);
-  // const [emailValidation, setemailValidation] = useState(false);
-
+  // const [email, setEmail] = useState(false);
   const handleSubmit = () => {
     if (userRegistration.Password === userRegistration.ConfirmPassword) {
       setCheckPassword(true);
     } else {
       setCheckPassword(false);
     }
+    const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    if (userRegistration.Email === regex) {
+      setUserRegistration.Email(true);
+    }
   };
 
   const handleInput = (e) => {
-    const { name } = e.target;
-    const { value } = e.target;
-    console.log(name, value);
+    const { name, value } = e.target;
     setUserRegistration({ ...userRegistration, [name]: value });
   };
   return (
@@ -42,16 +42,16 @@ const Signup = () => {
             <h4 className="h44">Create Your Account</h4>
             <p>Enter your full name and email address to create your account</p>
             <form className="row">
-              <div className="field col-md-6 my-2">
-                <label htmlFor="FirstName">First Name</label>
-                <br />
-                <div className="action">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
-                    alt=""
-                    width="20px"
-                    height="auto"
-                  />
+              <div className="field col-lg-6 my-2">
+                <label htmlFor="FirstName" className="mb-2">First Name</label>
+                <div className="action input-group">
+                  <span className="input-group-text">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </span>
                   <input
                     type="text"
                     autoComplete="off"
@@ -59,20 +59,22 @@ const Signup = () => {
                     id="firstname"
                     value={userRegistration.FirstName}
                     onChange={handleInput}
+                    placeholder="firstname"
+                    className="form-control"
                   />
                 </div>
               </div>
 
-              <div className="field col-md-6 my-2">
-                <label htmlFor="LastName">Last Name</label>
-                <br />
-                <div className="action">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
-                    alt=""
-                    width="20px"
-                    height="auto"
-                  />
+              <div className="field col-lg-6 my-2">
+                <label htmlFor="LastName" className="mb-2">Last Name</label>
+                <div className="action input-group">
+                  <span className="input-group-text">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </span>
                   <input
                     type="text"
                     autoComplete="off"
@@ -80,20 +82,22 @@ const Signup = () => {
                     id="lastname"
                     value={userRegistration.LastName}
                     onChange={handleInput}
+                    placeholder="lastname"
+                    className="form-control"
                   />
                 </div>
               </div>
 
-              <div className="field col-md-6 my-2">
-                <label htmlFor="Username">Username</label>
-                <br />
-                <div className="action">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
-                    alt=""
-                    width="20px"
-                    height="auto"
-                  />
+              <div className="field col-lg-6 my-2">
+                <label htmlFor="Username" className="mb-2">Username</label>
+                <div className="action input-group">
+                  <span className="input-group-text">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </span>
                   <input
                     type="text"
                     autoComplete="off"
@@ -101,20 +105,22 @@ const Signup = () => {
                     id="username"
                     value={userRegistration.Username}
                     onChange={handleInput}
+                    placeholder="username"
+                    className="form-control"
                   />
                 </div>
               </div>
 
-              <div className="field col-md-6 my-2">
-                <label htmlFor="Email">Email</label>
-                <br />
-                <div className="action">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
-                    alt=""
-                    width="20px"
-                    height="auto"
-                  />
+              <div className="field col-lg-6 my-2">
+                <label htmlFor="Email" className="mb-2">Email</label>
+                <div className="action input-group">
+                  <span className="input-group-text">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </span>
                   <input
                     type="text"
                     autoComplete="off"
@@ -122,20 +128,22 @@ const Signup = () => {
                     id="email"
                     value={userRegistration.Email}
                     onChange={handleInput}
+                    placeholder="email"
+                    className="form-control"
                   />
                 </div>
               </div>
 
-              <div className="field col-md-6 my-2">
-                <label htmlFor="Password">Password</label>
-                <br />
-                <div className="action">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
-                    alt=""
-                    width="20px"
-                    height="auto"
-                  />
+              <div className="field col-lg-6 my-2">
+                <label htmlFor="Password" className="mb-2">Password</label>
+                <div className="action input-group">
+                  <span className="input-group-text">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </span>
                   <input
                     type="password"
                     autoComplete="off"
@@ -143,20 +151,22 @@ const Signup = () => {
                     id="password"
                     value={userRegistration.Password}
                     onChange={handleInput}
+                    placeholder="password"
+                    className="form-control"
                   />
                 </div>
               </div>
 
-              <div className="field col-md-6 my-2">
-                <label htmlFor="ConfirmPassword">Confirm Password</label>
-                <br />
-                <div className="action">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
-                    alt=""
-                    width="20px"
-                    height="auto"
-                  />
+              <div className="field col-lg-6 my-2">
+                <label htmlFor="ConfirmPassword" className="mb-2">Confirm Password</label>
+                <div className="action input-group">
+                  <span className="input-group-text">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </span>
                   <input
                     type="password"
                     autoComplete="off"
@@ -164,8 +174,10 @@ const Signup = () => {
                     id="confirmPassword"
                     value={userRegistration.ConfirmPassword}
                     onChange={handleInput}
+                    placeholder="confirmpassword"
+                    className="form-control"
                   />
-                  <br />
+
                 </div>
               </div>
 
@@ -190,7 +202,6 @@ const Signup = () => {
                 </label>
               </div>
               <Button className="btn btn-theme" onClick={handleSubmit}>Register</Button>
-              <br />
               {" "}
               <p className="my-3 text-center">
                 Already have an account?
@@ -207,7 +218,7 @@ const Signup = () => {
             <div className="bg-img">
               <div className="d-flex align-items-center flex-column justify-content-center img-content px-5">
                 <h3>About Shehnshah</h3>
-                <p>
+                <p className="text-center">
                   Long queues time works, that's what comes to your
                   mind when you think about getting your car washed.Shehnshah is here
                   to change this forever.Car washing won't be the same again

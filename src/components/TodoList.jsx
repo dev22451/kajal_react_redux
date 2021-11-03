@@ -1,6 +1,4 @@
-/* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
-// created TodoList component
 import React from "react";
 
 const TodoList = (props) => {
@@ -20,7 +18,7 @@ const TodoList = (props) => {
       }}
     >
       <div style={{ marginRight: "0.6rem" }}>{item.item}</div>
-      <button onClick={() => removeTodo(item.id)}>
+      <button type="button" onClick={() => removeTodo(item.id)}>
         {" "}
         <img
           src="https://cdn-icons-png.flaticon.com/512/709/709519.png"
