@@ -5,28 +5,36 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Button } from "react-bootstrap";
 import "./style.css";
+import axios from "axios";
 
 const Signup = () => {
   const [userRegistration, setUserRegistration] = useState({
-    FirstName: "",
-    LastName: "",
-    Username: "",
-    Email: "",
-    Password: "",
-    ConfirmPassword: "",
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
   const [checkPassword, setCheckPassword] = useState(false);
   // const [email, setEmail] = useState(false);
   const handleSubmit = () => {
-    if (userRegistration.Password === userRegistration.ConfirmPassword) {
+    if (userRegistration.password === userRegistration.confirmPassword) {
       setCheckPassword(true);
     } else {
       setCheckPassword(false);
     }
-    const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
-    if (userRegistration.Email === regex) {
-      setUserRegistration.Email(true);
-    }
+    // eslint-disable-next-line no-unused-vars
+    const data = async (url) => {
+      const options = {
+        method: "POST",
+        url: "http://192.168.1.42:5578/user/register",
+
+      };
+      const result = await axios(options);
+      console.log(result);
+      return result;
+    };
   };
 
   const handleInput = (e) => {
